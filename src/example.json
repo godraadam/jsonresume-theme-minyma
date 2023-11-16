@@ -113,7 +113,7 @@
       "area": "Software Engineering",
       "studyType": "Bachelors",
       "institution": "Technical University of Cluj-Napoca",
-      "gpa": ""
+      "url": "https://ac.utcluj.ro/acasa.html"
     }
   ],
   "awards": [
@@ -191,6 +191,11 @@
   ],
   "interests": [],
   "references": [],
+  "certificates": [{
+    "name": "Certificate of Cybersecurity expert",
+    "date": "2023-10-31",
+    "issuer": "Bucharest Business Education"
+  }],
   "projects": [
     {
       "name": "Privy Messenger",
@@ -200,9 +205,7 @@
       "startDate": "2021-10",
       "endDate": "2022-06",
       "website": "https://privy-web.netlify.app/",
-      "roles": ["Solo developer"],
-      "entity": "",
-      "type": ""
+      "roles": ["Solo developer"]
     },
     {
       "name": "Quino.ai",
@@ -212,9 +215,7 @@
       "startDate": "2023-01",
       "endDate": "2023-09",
       "website": "https://quino.ai",
-      "roles": ["Full stack software engineer"],
-      "entity": "",
-      "type": ""
+      "roles": ["Full stack software engineer"]
     }
   ],
   "meta": {
