@@ -42,7 +42,7 @@
  - [x] Awards
  - [x] Certificates
  - [x] Publications
- - [ ] Location
+ - [x] Location
  - [ ] Volunteer
  - [ ] References
 
