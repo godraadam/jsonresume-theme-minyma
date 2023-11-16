@@ -1,72 +1,66 @@
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' href='styles.css' />
     <title>{{basics.name}}'s Resume</title>
   </head>
-  <body class="bg-neutral-100 py-40">
-    <div class="flex flex-col gap-12 w-2/3 mx-auto">
+  <body class='bg-neutral-50 py-20 xl:py-40'>
+    <div class='mx-auto flex w-2/3 flex-col gap-12'>
       {{! header section }}
-      <div class="flex flex-col items-center py-8">
-        <div class="flex justify-center items-center gap-5 py-5">
+      <div class='flex flex-col items-center py-8'>
+        <div class='flex flex-col items-center justify-center gap-5 py-5 md:flex-row'>
           <img
             src={{basics.image}}
-            alt="avatar"
-            class="w-16 y-16 rounded-full shadow-max"
+            alt='avatar'
+            class='y-32 md:y-16 w-32 rounded-full drop-shadow-md md:w-16'
           />
-          <h1 class="text-5xl font-bold">{{basics.name}}</h1>
+          <h1 class='text-3xl font-bold md:text-5xl'>{{basics.name}}</h1>
         </div>
-        <h2 class="font-thin text-2xl tracking-wide">{{basics.label}}</h2>
+        <h2 class='text-xl font-thin tracking-wide md:text-2xl'>{{basics.label}}</h2>
       </div>
       {{! contact info section}}
-      <div class="grid grid-cols-2">
-        <div class="flex flex-col">
+      <div class='grid md:grid-cols-2'>
+        <div class='flex flex-col'>
           <a
-            class="text-sky-700 pt-1 hover:underline"
-            href="mailto: {{basics.email}}"
+            class='pt-1 text-sky-700 hover:underline'
+            href='mailto: {{basics.email}}'
           >{{basics.email}}</a>
           <a
-            class="text-sky-700 pt-1 hover:underline"
-            href={{basics.url}}
-            target="_blank"
-          >{{basics.url}}</a>
-          <a class="text-sky-700 pt-1">{{basics.phone}}</a>
+            class='pt-1 text-sky-700 hover:underline'
+            href={{basics.website}}
+            target='_blank'
+          >{{basics.website}}</a>
+          <a class='pt-1 text-sky-700' href='tel: {{basics.phone}}'>{{basics.phone}}</a>
         </div>
         <div>
           {{#each basics.profiles}}
-            <div class="flex justify-end pt-1">
-              <span
-                class="lowercase font-light text-neutral-700"
-              >{{network}}/</span>
-              <a
-                class="text-sky-700 hover:underline"
-                href={{url}}
-                target="_blank"
-              >{{username}}</a>
+            <div class='flex pt-1 md:justify-end'>
+              <span class='font-light lowercase text-neutral-700'>{{network}}/</span>
+              <a class='text-sky-700 hover:underline' href={{url}} target='_blank'>{{username}}</a>
             </div>
           {{/each}}
         </div>
       </div>
-      <div class="divide-y-2">
+      <div class='divide-y-2'>
         {{! Summary }}
-        <div class="flex flex-col py-5 gap-3">
-          <h2 class="text-3xl font-bold">Summary</h2>
+        <div class='flex flex-col gap-3 py-5'>
+          <h2 class='text-3xl font-bold'>Summary</h2>
           <p>{{basics.summary}}</p>
         </div>
         {{! Skills }}
-        <div class="flex flex-col py-5 gap-3">
-          <h2 class="text-3xl font-bold">Skills</h2>
-          <div class="grid grid-cols-3 justify-items gap-3">
+        <div class='flex flex-col gap-3 py-5'>
+          <h2 class='text-3xl font-bold'>Skills</h2>
+          <div class='justify-items grid gap-3 md:grid-cols-2 xl:grid-cols-3'>
             {{#each skills}}
               <div>
-                <h3 class="font-semibold text-lg">{{name}}</h3>
-                <span class="font-light text-neutral-700">{{level}}</span>
-                <div class="flex flex-wrap gap-1 py-3">
+                <h3 class='text-lg font-semibold'>{{name}}</h3>
+                <span class='font-light text-neutral-700'>{{level}}</span>
+                <div class='flex flex-wrap gap-1 py-3'>
                   {{#each keywords}}
                     <div
-                      class="rounded-full text-sm px-3 py-1 bg-neutral-800 text-neutral-200 w-fit font-semibold"
+                      class='w-fit rounded-full bg-neutral-800 px-3 py-1 text-sm font-semibold text-neutral-200'
                     >
                       {{this}}
                     </div>
@@ -77,34 +71,34 @@
           </div>
         </div>
         {{! Work }}
-        <div class="py-5">
-          <h2 class="text-3xl font-bold pb-3">Work</h2>
-          <ul class="list-disc">
+        <div class='py-5'>
+          <h2 class='pb-3 text-3xl font-bold'>Work</h2>
+          <ul class='list-disc space-y-4'>
             {{#each work}}
-              <li class="py-2">
-                <div class="flex items-center justify-between">
+              <li class='py-2'>
+                <div class='flex flex-col-reverse justify-between md:flex-row md:items-center'>
                   <a
                     href={{url}}
-                    target="_blank"
-                    class="text-xl font-semibold pb-1 hover:underline"
-                  >{{name}}</a>
+                    target='_blank'
+                    class='pb-1 text-xl font-semibold hover:underline'
+                  >{{company}}</a>
                   <div>
-                    <span class="font-light text-neutral-600">{{startDate}}
+                    <span class='font-light text-neutral-600'>{{startDate}}
                     </span>
                     {{#if endDate}}
-                      <span class="font-light text-neutral-600">-
+                      <span class='font-light text-neutral-600'>-
                         {{endDate}}
                       </span>
                     {{else}}
-                      <span class="font-light text-neutral-600">
+                      <span class='font-light text-neutral-600'>
                         - present</span>
                     {{/if}}
                   </div>
                 </div>
-                <span class="italic text-lg">{{position}}</span>
-                <ul class="pt-2">
+                <span class='text-lg italic'>{{position}}</span>
+                <ul class='pt-2'>
                   {{#each highlights}}
-                    <li class="text-neutral-600 tracking-wider">- {{this}}</li>
+                    <li class='tracking-wider text-neutral-600'>- {{this}}</li>
                   {{/each}}
                 </ul>
               </li>
@@ -112,40 +106,40 @@
           </ul>
         </div>
         {{! Education }}
-        <div class="flex flex-col py-5 gap-3">
-          <h2 class="text-3xl font-bold">Education</h2>
-          <ul class="list-disc">
+        <div class='flex flex-col gap-3 py-5'>
+          <h2 class='text-3xl font-bold'>Education</h2>
+          <ul class='list-disc'>
             {{#each education}}
               <li>
-                <div class="flex items-center justify-between">
+                <div class='flex flex-col-reverse justify-between md:flex-row md:items-center'>
                   <a
                     href={{url}}
-                    target="_blank"
-                    class="text-xl font-semibold pb-1 hover:underline"
+                    target='_blank'
+                    class='pb-1 text-xl font-semibold hover:underline'
                   >{{institution}}</a>
                   <div>
-                    <span class="font-light text-neutral-600">{{startDate}}
+                    <span class='font-light text-neutral-600'>{{startDate}}
                     </span>
                     {{#if endDate}}
-                      <span class="font-light text-neutral-600">-
+                      <span class='font-light text-neutral-600'>-
                         {{endDate}}
                       </span>
                     {{else}}
-                      <span class="font-light text-neutral-600">
+                      <span class='font-light text-neutral-600'>
                         - present</span>
                     {{/if}}
                   </div>
                 </div>
-                <span class="italic text-lg py-1">{{studyType}}
+                <span class='py-1 text-lg italic'>{{studyType}}
                   {{#if area}}
                     in
                     {{area}}
                   {{/if}}
                 </span>
-                <div class="flex flex-wrap gap-1 py-1">
+                <div class='flex flex-wrap gap-1 py-1'>
                   {{#each courses}}
                     <div
-                      class="rounded-full text-sm px-3 py-1 bg-neutral-800 text-neutral-200 w-fit font-semibold"
+                      class='w-fit rounded-full bg-neutral-800 px-3 py-1 text-sm font-semibold text-neutral-200'
                     >
                       {{this}}
                     </div>
@@ -156,21 +150,17 @@
           </ul>
         </div>
         {{! Projects }}
-        <div class="py-5">
-          <h2 class="text-3xl font-bold pb-3">Projects</h2>
-          <div class="flex flex-wrap justify-between gap-3">
+        <div class='py-5'>
+          <h2 class='pb-3 text-3xl font-bold'>Projects</h2>
+          <div class='flex flex-wrap justify-between gap-3'>
             {{#each projects}}
               <div>
-                <a
-                  href={{url}}
-                  target="_blank"
-                  class="font-semibold text-lg"
-                >{{name}}</a>
-                <p class="italic">{{description}}</p>
-                <ul class="flex flex-wrap gap-1 py-3">
+                <a href={{url}} target='_blank' class='text-lg font-semibold'>{{name}}</a>
+                <p class='italic'>{{description}}</p>
+                <ul class='flex flex-wrap gap-1 py-3'>
                   {{#each keywords}}
                     <li
-                      class="rounded-full text-sm px-3 py-1 bg-neutral-800 text-neutral-200 w-fit font-semibold"
+                      class='w-fit rounded-full bg-neutral-800 px-3 py-1 text-sm font-semibold text-neutral-200'
                     >
                       {{this}}
                     </li>
@@ -181,17 +171,17 @@
           </div>
         </div>
         {{! Languages, Interests etc }}
-        <div class="pt-5">
-          <div class="flex flex-wrap justify-start gap-12">
+        <div class='pt-5'>
+          <div class='grid gap-12 md:grid-cols-2 2xl:grid-cols-4'>
             {{#if languages}}
-              <div class="w-max">
-                <h3 class="font-semibold text-lg">Languages</h3>
+              <div>
+                <h3 class='text-lg font-semibold'>Languages</h3>
                 {{#each languages}}
                   <div>
                     {{language}}
                   </div>
                   {{#if fluency}}
-                    <div class="font-light text-neutral-600">
+                    <div class='font-light text-neutral-600'>
                       -
                       {{fluency}}
                     </div>
@@ -200,14 +190,14 @@
               </div>
             {{/if}}
             {{#if interests}}
-              <div class="w-max">
-                <h3 class="font-semibold text-lg">Interests</h3>
+              <div>
+                <h3 class='text-lg font-semibold'>Interests</h3>
                 {{#each interests}}
                   <div>
                     {{name}}
                   </div>
                   {{#each keywords}}
-                    <div class="font-light text-neutral-600">
+                    <div class='font-light text-neutral-600'>
                       -
                       {{this}}
                     </div>
@@ -216,26 +206,26 @@
               </div>
             {{/if}}
             {{#if awards}}
-              <div class="w-max">
-                <h3 class="font-semibold text-lg">Awards</h3>
+              <div>
+                <h3 class='text-lg font-semibold'>Awards</h3>
                 {{#each awards}}
-                  <a href={{url}} target="_blank" class="hover:underline">
+                  <a href={{url}} target='_blank' class='hover:underline'>
                     {{title}}
                   </a>
                   {{#if awarder}}
-                    <div class="font-light text-neutral-600">
+                    <div class='font-light text-neutral-600'>
                       -
                       {{awarder}}
                     </div>
                   {{/if}}
                   {{#if date}}
-                    <div class="font-light text-neutral-600">
+                    <div class='font-light text-neutral-600'>
                       -
                       {{date}}
                     </div>
                   {{/if}}
                   {{#if summary}}
-                    <div class="font-light text-neutral-600">
+                    <div class='font-light text-neutral-600'>
                       -
                       {{summary}}
                     </div>
@@ -244,20 +234,20 @@
               </div>
             {{/if}}
             {{#if certificates}}
-              <div class="w-max">
-                <h3 class="font-semibold text-lg">Certificates</h3>
+              <div>
+                <h3 class='text-lg font-semibold'>Certificates</h3>
                 {{#each certificates}}
-                  <a href={{url}} target="_blank" class="hover:underline">
+                  <a href={{url}} target='_blank' class='hover:underline'>
                     {{name}}
                   </a>
                   {{#if issuer}}
-                    <div class="font-light text-neutral-600">
+                    <div class='font-light text-neutral-600'>
                       -
                       {{issuer}}
                     </div>
                   {{/if}}
                   {{#if date}}
-                    <div class="font-light text-neutral-600">
+                    <div class='font-light text-neutral-600'>
                       -
                       {{date}}
                     </div>
@@ -266,20 +256,20 @@
               </div>
             {{/if}}
             {{#if publications}}
-              <div class="w-max">
-                <h3 class="font-semibold text-lg">Publications</h3>
+              <div>
+                <h3 class='text-lg font-semibold'>Publications</h3>
                 {{#each publications}}
-                  <a href={{url}} target="_blank" class="hover:underline">
+                  <a href={{url}} target='_blank' class='hover:underline'>
                     {{name}}
                   </a>
                   {{#if releaseDate}}
-                    <div class="font-light text-neutral-600">
+                    <div class='font-light text-neutral-600'>
                       -
                       {{releaseDate}}
                     </div>
                   {{/if}}
                   {{#if summary}}
-                    <div class="font-light text-neutral-600">
+                    <div class='font-light text-neutral-600'>
                       -
                       {{summary}}
                     </div>

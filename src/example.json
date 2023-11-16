@@ -1,38 +1,73 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Godra Ádám",
-    "label": "Full Stack & Blockchain Engineer",
+    "label": "Senior Full Stack Software Engineer",
     "image": "https://godraadam.com/myself.jpg",
+    "summary": "I am a 24 years old full-stack software engineer, based in Romania. I am focused on creating better tools, better APIs and better UIs.",
+    "website": "https://godraadam.com",
     "email": "godra.adam@gmail.com",
-    "summary": "I am a 23 years old full-stack software engineer, based in Romania. I am focused on better tools, better APIs, decentralization, data security.",
-    "url": "https://godraadam.com",
     "location": {
       "city": "Cluj-Napoca",
       "countryCode": "RO"
     },
     "profiles": [
       {
-        "network": "GitHub",
+        "username": "@AdamGodra",
+        "url": "https://twitter.com/AdamGodra",
+        "network": "twitter"
+      },
+      {
+        "url": "https://github.com/godraadam",
         "username": "godraadam",
-        "url": "https://github.com/godraadam"
+        "network": "github"
       },
       {
         "network": "LinkedIn",
         "username": "Godra Ádám",
         "url": "https://www.linkedin.com/in/godraadam/"
       }
-    ]
+    ],
+    "picture": "https://godraadam.com/myself.jpg"
   },
   "work": [
     {
-      "name": "Minyma-Technologies",
-      "location": "Remote",
-      "description": "Young team of talented developers working on decentralized solutions",
+      "company": "Webgurus",
+      "location": "Cluj-Napoca, RO",
+      "description": "",
+      "position": "Senior full-stack software engineer",
+      "website": "https://webgurus.io",
+      "startDate": "2023-09",
+      "summary": "Develop a b2b site that allows placement of bulk print media orders, used by giant US corporations",
+      "highlights": [
+        "Storefront and admin site for marketing media webstore in TS and Vue3",
+        "Develop backend using SST, AWS lambdas and MongoDb",
+        "UI overhaul using TailwincCSS"
+      ]
+    },
+    {
+      "company": "Quino.ai",
+      "location": "Remote, RO",
+      "description": "",
+      "position": "Full-stack software engineer",
+      "website": "https://quino.ai",
+      "startDate": "2022-12",
+      "endDate": "2023-09",
+      "summary": "Quino aims to deliver an affordable, AI-assisted learning method for students and researchers that helps attain fast and simple study practices and easier knowledge navigation in the age of information.",
+      "highlights": [
+        "Rebuild Quino App with React, TS, React Query, TailwindCSS, and Zustand",
+        "Rebuild Quino Website with NextJS, TailwindCSS and Strapi",
+        "Build and develop Python+FastAPI+PostgreSQL backend"
+      ]
+    },
+    {
+      "company": "Minyma-Technologies",
+      "location": "Remote, RO/IT",
+      "description": "",
       "position": "Backend/Blockchain Engineer - full time",
-      "url": "https://www.minyma-tech.com/",
-      "startDate": "2022-01-04",
-      "summary": "Minyma-Technologies is a startup company which branches its research into machine learning and knowledge representation innovations with a keen interest in fintech ",
+      "website": "\"https://www.minyma-tech.com/",
+      "startDate": "2022-01",
+      "endDate": "2022-12",
+      "summary": "Minyma-Technologies is a startup company which branches its research into machine learning and knowledge representation innovations with a keen interest in fintech",
       "highlights": [
         "Build backend for the Galaxis Community Space",
         "Create the Solidity smart contracts governing the transactions of custom NFTs",
@@ -40,159 +75,149 @@
       ]
     },
     {
-      "name": "Accenture Industry-X",
+      "company": "Accenture Industry-X",
       "location": "Cluj-Napoca, RO",
-      "description": "Working on embedded systems for the german railway industry",
+      "description": "",
       "position": "Backend Engineer - part time",
-      "url": "https://www.accenture.com/ca-en/about/industry-x-index",
-      "startDate": "2021-05-04",
-      "endDate": "2021-09-19",
+      "website": "https://www.accenture.com/ca-en/about/industry-x-index",
+      "startDate": "2021-05",
+      "endDate": "2021-09",
       "summary": "At Accenture Industry X we developed a complex railway scheduling and inspecting system",
       "highlights": [
-        "Update the parser to support new requirements of the industry",
+        "Update the parser to support new requirements of the client",
         "Create a migration tool to automatically update inputs of the deprecated syntax",
         "Setup automatic validation of the new system via automatic unit and integration testing"
       ]
     },
     {
-      "name": "Softech/CodeSpring",
-      "location": "Remote",
-      "description": "Worked on the backend of a competitive hiking organization's site",
+      "company": "Softech/CodeSpring",
+      "location": "Cluj-Napoca, RO",
+      "description": "",
       "position": "Backend Engineer - internship",
-      "url": "https://www.codespring.ro/",
-      "startDate": "2020-06-03",
-      "endDate": "2020-09-10",
+      "website": "https://www.codespring.ro/",
+      "startDate": "2020-06",
+      "endDate": "2020-09",
       "summary": "As an intern, I got to work on the backend of a website whose purpose was to serve those interested in the hiking competitions organized by our client. This includes registration, email sending, notifications, as well as live tracking of competitors on the site via the use fo QR codes scanned and different checkpoints of the race.",
       "highlights": [
         "Upgrade the dependecies of the applications and fix subsequent broken components",
-        "Architect the CI/CD of the application for streamlined DevOps",
+        "Architect the gitlab CI workflow of the application for streamlined integration",
         "Implement the QR code scanning feature on the Android mobile application"
       ]
     }
   ],
-
+  "volunteer": [],
   "education": [
     {
-      "institution": "Technical University of Cluj-Napoca",
-      "url": "https://ac.utcluj.ro/acasa.html",
+      "endDate": "2022-07",
+      "startDate": "2018-10",
       "area": "Software Engineering",
-      "studyType": "Bachelor",
-      "startDate": "2018-10-01",
-      "endDate": "2022-06-14",
-      "score": "9.80",
-      "courses": ["Database Design", "Sofware Engineering"]
-    }
-  ],
-  "skills": [
-    {
-      "name": "Web Development",
-      "level": "3 years",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "Javascript",
-        "React",
-        "Next",
-        "TailwindCSS",
-        "AlpineJS",
-        "Typescript"
-      ]
-    },
-    {
-      "name": "Backend Engineering",
-      "level": "4 years",
-      "keywords": [
-        "Java",
-        "SpringBoot",
-        "Python",
-        "FastAPI",
-        "NodeJS",
-        "ExpressJS"
-      ]
-    },
-    {
-      "name": "Blockchain Engineering",
-      "level": "2 years",
-      "keywords": [
-        "Solidity",
-        "Hardhat",
-        "Javascript",
-        "EthersJS",
-        "Python",
-        "Brownie",
-        "ethers.py"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "English",
-      "fluency": "CAE C2 Level"
-    },
-    {
-      "language": "Romanian",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "Hungarian",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "German",
-      "fluency": "A2 Level"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Privy Messenger",
-      "description": "A peer-to-peer, end-to-end encrypted messaging system",
-      "highlights": [
-        "Won award at information technology student conference in 2022",
-        "Built on modern peer-to-peer technologies, such as IPFS and OrbitDB"
-      ],
-      "keywords": ["IPFS", "P2P", "E2EE", "Python", "Typescript"],
-      "startDate": "2021-08-24",
-      "endDate": "2022-06-10",
-      "url": "https://privy-web.netlify.app/",
-      "roles": ["Solo developer"],
-      "type": "application"
-    },
-    {
-      "name": "Galaxis Community Space",
-      "description": "Plug and play NFT and ecosystem deployment tool",
-      "highlights": [
-        "Worked on the smart contract arhitecture to co-ordinate sell&buy of NFTs",
-        "Managed automatic deployment of smart contracts to the Ethereum blockchain"
-      ],
-      "keywords": ["Python", "FastAPI", "Solidity", "Hardhat"],
-      "startDate": "2022-01-04",
-      "endDate": "2022-12-31",
-      "url": "https://galaxis.xyz/#/our-projects",
-      "roles": ["Backend/blockchain engineer"],
-      "type": "application"
+      "studyType": "Bachelors",
+      "institution": "Technical University of Cluj-Napoca",
+      "gpa": ""
     }
   ],
   "awards": [
     {
       "title": "3rd prize at CSSC 2022",
-      "date": "2022-06-14",
       "awarder": "UTCN-UBB",
-      "summary": "A scientific conference for Computer Science students in Cluj-Napoca"
+      "date": "2022-06-14",
+      "summary": "A scientific conference for Computer Science students in Cluj-Napoca, where I presented my bachelor's thesis titled Privy Messenger"
     }
   ],
   "publications": [
     {
+      "name": "Practical Approach to Design and Implement a P2P and E2EE Instant Messaging System",
+      "publisher": "Research Gate",
+      "releaseDate": "2023-09",
+      "website": "https://www.researchgate.net/publication/374646379_Practical_Approach_to_Design_and_Implement_a_P2P_and_E2EE_Instant_Messaging_System",
+      "summary": ""
+    }
+  ],
+  "skills": [
+    {
+      "keywords": [
+        "HTML / JSX",
+        "CSS / TailwindCSS",
+        "Javascript / Typescript",
+        "React / NextJS",
+        "Vue3",
+        "SPA / SSR / Jamstack"
+      ],
+      "level": "Senior",
+      "name": "Frontend"
+    },
+    {
+      "name": "Backend",
+      "level": "Senior",
+      "keywords": [
+        "Node",
+        "Python",
+        "PostgreSQL",
+        "MongoDB",
+        "FastAPI",
+        "ExpressJS",
+        "NextJS",
+        "Java",
+        "BootSpring",
+        "Drizzle",
+        "Prisma",
+        "SQLAlchemy",
+        "Hibernate"
+      ]
+    },
+    {
+      "keywords": ["AWS", "G Cloud", "Heroku", "GitHub Actions", "Gitlab Workflows"],
+      "level": "Medior",
+      "name": "Devops"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Romanian",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Hungarian",
+      "fluency": "Native"
+    },
+    {
+      "language": "Italian",
+      "fluency": "Beginner"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": [
+    {
       "name": "Privy Messenger",
-      "publisher": "Company",
-      "releaseDate": "2022-06-10",
-      "url": "https://publication.com",
-      "summary": "Privy Messenger is a fully disributed, P2P, E2EE messaging system based on IPFS"
+      "description": "A truly-serverless, peer-to-peer, end-to-end encrypted messaging system",
+      "highlights": [],
+      "keywords": ["IPFS", "P2P", "E2EE"],
+      "startDate": "2021-10",
+      "endDate": "2022-06",
+      "website": "https://privy-web.netlify.app/",
+      "roles": ["Solo developer"],
+      "entity": "",
+      "type": ""
+    },
+    {
+      "name": "Quino.ai",
+      "description": "AI assisted learning platform for students",
+      "highlights": [],
+      "keywords": ["AI", "Learning", "React", "NextJS", "TailwindCSS"],
+      "startDate": "2023-01",
+      "endDate": "2023-09",
+      "website": "https://quino.ai",
+      "roles": ["Full stack software engineer"],
+      "entity": "",
+      "type": ""
     }
   ],
   "meta": {
-    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
-    "version": "v1.0.0",
-    "theme": "actual",
-    "lastModified": "2022-12-06T13:21:00"
+    "theme": "tachyons-clean"
   }
 }

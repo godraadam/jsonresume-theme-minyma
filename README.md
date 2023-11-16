@@ -1,5 +1,5 @@
 # JSON Resume Minyma Theme
- This theme is a [minymal](https://www.minyma-tech.com/) theme for [JSON resume](https://jsonresume.org/): an awesome open source project for generating uniform resumes, with free hosting and customizable themes.
+ This is a theme for [JSON resume](https://jsonresume.org/): an awesome open source project for generating uniform resumes, with free hosting and customizable themes.
  
  ## Useage
  
