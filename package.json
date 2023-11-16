@@ -2,6 +2,7 @@
   "name": "@godraadam/jsonresume-theme-minyma",
   "version": "0.0.1",
   "description": "A custom theme for jsonresume",
+  "private": false,
   "main": "index.js",
   "scripts": {
     "compile:hbs": "node scripts/render-example.js",
