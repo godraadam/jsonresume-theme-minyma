@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-minyma",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A custom theme for jsonresume",
   "private": false,
   "main": "index.js",
@@ -19,7 +19,7 @@
   "author": "godraadam",
   "repository": {
     "type": "git",
-    "url": "https://github.com/godraadam/jsonresume-theme-minyma"
+    "url": "git+https://github.com/godraadam/jsonresume-theme-minyma.git"
   },
   "license": "ISC",
   "devDependencies": {
