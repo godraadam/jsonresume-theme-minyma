@@ -6,11 +6,12 @@
   "main": "index.js",
   "scripts": {
     "compile:hbs": "node scripts/render-example.js",
-    "compile:tw": "tailwindcss -i ./src/input.css -o ./output/styles.css",
-    "watch:hbs": "watch \"npm run compile:hbs\" ./src",
-    "watch:tw": "tailwindcss -i ./src/input.css -o ./output/styles.css --watch",
+    "compile:tw": "tailwindcss -i ./src/input.css -o ./output/styles.css --minify",
+    "watch": "watch \"npm run compile:hbs && npm run compile:tw && npm run inlineOutput\" ./src",
     "serve": "live-server output",
-    "dev": "concurrently \"npm run watch:tw\" \"npm run watch:hbs\" \"npm run serve\""
+    "dev": "concurrently \"npm run watch\" \"npm run serve\"",
+    "inlineOutput": "node scripts/inline-output.js",
+    "prepublishOnly": "npm run compile:hbs && npm run compile:tw && npm run inlineOutput"
   },
   "keywords": [
     "jsonresume",
