@@ -3,7 +3,7 @@
     "name": "Godra Ádám",
     "label": "Senior Full Stack Software Engineer",
     "image": "https://godraadam.com/myself.jpg",
-    "summary": "I am a 24 years old full-stack software engineer, based in Romania. I am focused on creating better tools, better APIs and better UIs.",
+    "summary": "I am a 25 years old full-stack software engineer, based in Romania. I am focused on creating better tools, better APIs and better UIs.",
     "website": "https://godraadam.com",
     "email": "godra.adam@gmail.com",
     "location": {
@@ -31,11 +31,11 @@
   },
   "work": [
     {
-      "company": "Webgurus",
+      "name": "Webgurus",
       "location": "Cluj-Napoca, RO",
       "description": "",
       "position": "Senior full-stack software engineer",
-      "website": "https://webgurus.io",
+      "url": "https://webgurus.io",
       "startDate": "2023-09",
       "summary": "Develop a b2b site that allows placement of bulk print media orders, used by giant US corporations",
       "highlights": [
@@ -45,11 +45,11 @@
       ]
     },
     {
-      "company": "Quino.ai",
+      "name": "Quino.ai",
       "location": "Remote, RO",
       "description": "",
       "position": "Full-stack software engineer",
-      "website": "https://quino.ai",
+      "url": "https://quino.ai",
       "startDate": "2022-12",
       "endDate": "2023-09",
       "summary": "Quino aims to deliver an affordable, AI-assisted learning method for students and researchers that helps attain fast and simple study practices and easier knowledge navigation in the age of information.",
@@ -60,11 +60,11 @@
       ]
     },
     {
-      "company": "Minyma-Technologies",
+      "name": "Minyma-Technologies",
       "location": "Remote, RO/IT",
       "description": "",
       "position": "Backend/Blockchain Engineer - full time",
-      "website": "\"https://www.minyma-tech.com/",
+      "url": "https://www.minyma-tech.com",
       "startDate": "2022-01",
       "endDate": "2022-12",
       "summary": "Minyma-Technologies is a startup company which branches its research into machine learning and knowledge representation innovations with a keen interest in fintech",
@@ -75,11 +75,11 @@
       ]
     },
     {
-      "company": "Accenture Industry-X",
+      "name": "Accenture Industry-X",
       "location": "Cluj-Napoca, RO",
       "description": "",
       "position": "Backend Engineer - part time",
-      "website": "https://www.accenture.com/ca-en/about/industry-x-index",
+      "url": "https://www.accenture.com/ca-en/about/industry-x-index",
       "startDate": "2021-05",
       "endDate": "2021-09",
       "summary": "At Accenture Industry X we developed a complex railway scheduling and inspecting system",
@@ -90,11 +90,11 @@
       ]
     },
     {
-      "company": "Softech/CodeSpring",
+      "name": "Softech/CodeSpring",
       "location": "Cluj-Napoca, RO",
       "description": "",
       "position": "Backend Engineer - internship",
-      "website": "https://www.codespring.ro/",
+      "url": "https://www.codespring.ro/",
       "startDate": "2020-06",
       "endDate": "2020-09",
       "summary": "As an intern, I got to work on the backend of a website whose purpose was to serve those interested in the hiking competitions organized by our client. This includes registration, email sending, notifications, as well as live tracking of competitors on the site via the use fo QR codes scanned and different checkpoints of the race.",

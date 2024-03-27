@@ -7,7 +7,7 @@
     <title>{{basics.name}}'s Resume</title>
   </head>
   <body class="bg-neutral-50 py-20 selection:bg-black selection:text-neutral-200 xl:py-40">
-    <div class="mx-auto flex w-2/3 flex-col gap-12">
+    <div class="space-y-12 px-20 md:mx-auto md:w-2/3 md:px-0">
       {{! header section }}
       <header class="flex flex-col items-center py-8">
         <div class="flex flex-col items-center justify-center gap-5 py-5 md:flex-row">
@@ -61,135 +61,143 @@
       </div>
       <div class="divide-y-2">
         {{! Summary }}
-        <div class="flex flex-col gap-3 py-5">
+        <div class="space-y-3 py-5">
           <h2 class="font-inter text-3xl font-bold">Summary</h2>
           <p class="text-neutral-500">{{basics.summary}}</p>
         </div>
         {{! Skills }}
-        <div class="flex flex-col gap-3 py-5">
-          <h2 class="font-inter text-3xl font-bold">Skills</h2>
-          <div class="justify-items grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-            {{#each skills}}
-              <div>
-                <h3 class="text-lg font-semibold">{{name}}</h3>
-                <span class="font-light text-neutral-700">{{level}}</span>
-                <div class="flex flex-wrap gap-1 py-3">
-                  {{#each keywords}}
-                    <div
-                      class="w-fit rounded-full bg-neutral-800 px-3 py-1 text-sm font-semibold text-neutral-200"
-                    >
-                      {{this}}
-                    </div>
-                  {{/each}}
+        {{#if (notEmpty skills)}}
+          <div class="space-y-3 py-5">
+            <h2 class="font-inter text-3xl font-bold">Skills</h2>
+            <div class="justify-items grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+              {{#each skills}}
+                <div>
+                  <h3 class="text-lg font-semibold">{{name}}</h3>
+                  <span class="font-light text-neutral-700">{{level}}</span>
+                  <div class="flex flex-wrap gap-1 py-3">
+                    {{#each keywords}}
+                      <div
+                        class="w-fit rounded-full bg-neutral-800 px-3 py-1 text-sm font-semibold text-neutral-200"
+                      >
+                        {{this}}
+                      </div>
+                    {{/each}}
+                  </div>
                 </div>
-              </div>
-            {{/each}}
+              {{/each}}
+            </div>
           </div>
-        </div>
+        {{/if}}
         {{! Work }}
-        <div class="py-5">
-          <h2 class="pb-3 font-inter text-3xl font-bold">Work</h2>
-          <ul class="list-disc space-y-4">
-            {{#each work}}
-              <li class="ml-6 py-2">
-                <div class="flex flex-col-reverse justify-between md:flex-row md:items-center">
-                  <a
-                    href={{url}}
-                    target="_blank"
-                    class="text-xl font-semibold hover:underline"
-                  >{{company}}</a>
-                  <div>
-                    <span class="font-light text-neutral-600">{{startDate}}
-                    </span>
-                    {{#if endDate}}
-                      <span class="font-light text-neutral-600">-
-                        {{endDate}}
+        {{#if (notEmpty work)}}
+          <div class="py-5">
+            <h2 class="pb-3 font-inter text-3xl font-bold">Work</h2>
+            <ul class="list-disc space-y-4">
+              {{#each work}}
+                <li class="ml-6 py-2">
+                  <div class="flex flex-col-reverse justify-between md:flex-row md:items-center">
+                      <a
+                        href={{url}}
+                        target="_blank"
+                        class="text-xl font-semibold hover:underline"
+                      >{{name}}</a>
+                    <div>
+                      <span class="font-light text-neutral-600">{{startDate}}
                       </span>
-                    {{else}}
-                      <span class="font-light text-neutral-600">
-                        - present</span>
-                    {{/if}}
-                  </div>
-                </div>
-                <span class="text-lg font-thin text-neutral-700">{{position}}</span>
-                <ul class="pt-3">
-                  {{#each highlights}}
-                    <li class="text-neutral-500">- {{this}}</li>
-                  {{/each}}
-                </ul>
-              </li>
-            {{/each}}
-          </ul>
-        </div>
-        {{! Education }}
-        <div class="flex flex-col gap-3 py-5">
-          <h2 class="font-inter text-3xl font-bold">Education</h2>
-          <ul class="list-disc">
-            {{#each education}}
-              <li>
-                <div class="flex flex-col-reverse justify-between md:flex-row md:items-center">
-                  <a
-                    href={{url}}
-                    target="_blank"
-                    class="pb-1 text-xl font-semibold hover:underline"
-                  >{{institution}}</a>
-                  <div>
-                    <span class="font-light text-neutral-600">{{startDate}}
-                    </span>
-                    {{#if endDate}}
-                      <span class="font-light text-neutral-600">-
-                        {{endDate}}
-                      </span>
-                    {{else}}
-                      <span class="font-light text-neutral-600">
-                        - present</span>
-                    {{/if}}
-                  </div>
-                </div>
-                <span class="text-lg font-thin text-neutral-700">{{studyType}}
-                  {{#if area}}
-                    in
-                    {{area}}
-                  {{/if}}
-                </span>
-                <div class="flex flex-wrap gap-1 py-1">
-                  {{#each courses}}
-                    <div
-                      class="w-fit rounded-full bg-neutral-800 px-3 py-1 text-sm font-semibold text-neutral-200"
-                    >
-                      {{this}}
+                      {{#if endDate}}
+                        <span class="font-light text-neutral-600">-
+                          {{endDate}}
+                        </span>
+                      {{else}}
+                        <span class="font-light text-neutral-600">
+                          - present</span>
+                      {{/if}}
                     </div>
-                  {{/each}}
-                </div>
-              </li>
-            {{/each}}
-          </ul>
-        </div>
-        {{! Projects }}
-        <div class="py-5">
-          <h2 class="pb-3 font-inter text-3xl font-bold">Projects</h2>
-          <div class="grid gap-12 md:grid-cols-2 2xl:grid-cols-4">
-            {{#each projects}}
-              <div>
-                <a
-                  href={{url}}
-                  target="_blank"
-                  class="text-lg font-semibold hover:underline"
-                >{{name}}</a>
-                <p class="italic">{{description}}</p>
-                <ul class="flex flex-wrap gap-1 py-3">
-                  {{#each keywords}}
-                    <li
-                      class="w-fit rounded-full bg-neutral-800 px-3 py-1 text-sm font-semibold text-neutral-200"
-                    >
-                      {{this}}
-                    </li>
-                  {{/each}}
-                </ul>
-              </div>
-            {{/each}}
+                  </div>
+                  <span class="text-lg font-thin text-neutral-700">{{position}}</span>
+                  <ul class="pt-3">
+                    {{#each highlights}}
+                      <li class="text-neutral-500">- {{this}}</li>
+                    {{/each}}
+                  </ul>
+                </li>
+              {{/each}}
+            </ul>
           </div>
-        </div>
+        {{/if}}
+        {{! Education }}
+        {{#if (notEmpty education)}}
+          <div class="space-y-3 py-5">
+            <h2 class="font-inter text-3xl font-bold">Education</h2>
+            <ul class="list-disc">
+              {{#each education}}
+                <li>
+                  <div class="flex flex-col-reverse justify-between md:flex-row md:items-center">
+                    <a
+                      href={{url}}
+                      target="_blank"
+                      class="pb-1 text-xl font-semibold hover:underline"
+                    >{{institution}}</a>
+                    <div>
+                      <span class="font-light text-neutral-600">{{startDate}}
+                      </span>
+                      {{#if endDate}}
+                        <span class="font-light text-neutral-600">-
+                          {{endDate}}
+                        </span>
+                      {{else}}
+                        <span class="font-light text-neutral-600">
+                          - present</span>
+                      {{/if}}
+                    </div>
+                  </div>
+                  <span class="text-lg font-thin text-neutral-700">{{studyType}}
+                    {{#if area}}
+                      in
+                      {{area}}
+                    {{/if}}
+                  </span>
+                  <div class="flex flex-wrap gap-1 py-1">
+                    {{#each courses}}
+                      <div
+                        class="w-fit rounded-full bg-neutral-800 px-3 py-1 text-sm font-semibold text-neutral-200"
+                      >
+                        {{this}}
+                      </div>
+                    {{/each}}
+                  </div>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{! Projects }}
+        {{#if (notEmpty projects)}}
+          <div class="py-5">
+            <h2 class="pb-3 font-inter text-3xl font-bold">Projects</h2>
+            <div class="grid gap-12 md:grid-cols-2 2xl:grid-cols-4">
+              {{#each projects}}
+                <div>
+                  <a
+                    href={{url}}
+                    target="_blank"
+                    class="text-lg font-semibold hover:underline"
+                  >{{name}}</a>
+                  <p class="italic">{{description}}</p>
+                  <ul class="flex flex-wrap gap-1 py-3">
+                    {{#each keywords}}
+                      <li
+                        class="w-fit rounded-full bg-neutral-800 px-3 py-1 text-sm font-semibold text-neutral-200"
+                      >
+                        {{this}}
+                      </li>
+                    {{/each}}
+                  </ul>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        {{/if}}
         {{! Languages, Interests etc }}
         <div class="pt-5">
           <div class="grid gap-12 md:grid-cols-2 2xl:grid-cols-4">
@@ -317,7 +325,7 @@
         </div>
       </div>
     </div>
-    <footer class="mx-auto h-10 w-fit pt-24 pb-8 px-20 text-sm text-neutral-400">
+    <footer class="mx-auto h-10 w-fit px-20 pt-24 pb-8 text-sm text-neutral-400">
       CV Made with
       {{" "}}
       <a href="https://jsonresume.org/" class="hover:underline"> JSON Resume </a>
